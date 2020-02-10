@@ -1,13 +1,139 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Muli', sans-serif; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box; 
+  box-sizing:content-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*--------- Root Element ----------*/
+#root {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*------- Search Panel ----------*/
+.bar {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+/*--------- Title ----------*/
+.bar #title {
+  display: flex;
+  margin: auto;
+}
+.bar #title span {
+  display: inline-block;
+  margin: 5% 0.5rem;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.bar #title .fa-twitter {
+  font-size: 5rem;
+  color: rgba(29, 161, 242, 1.00);
+}
+
+/*--------- Search Bar ----------*/
+.bar #search-bar {
+  width: 100%;
+  display: flex;
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+  border: 1px solid grey;
+  box-shadow: 1px 1px 1px 1px grey;
+  overflow: hidden;
+}
+.bar #search-bar .fa-search {
+  padding: 0.4rem;
+  color: gray;
+}
+.bar #search-bar input {
+  border: none;
+  margin-right: 1rem;
+  flex-grow: 1;
+}
+.bar #search-bar input:focus {
+  outline: none;
+}
+.bar #search-bar datalist {
+  width: 100%;
+  background: white;
+}
+/*------- Search Button ---------*/
+.bar button {
+  margin: 0.8rem auto;
+}
+
+/*-------- Bar Top --------------*/
+.barTop {
+  display: flex;
+  align-content: flex-start;
+  padding: 0.7rem;
+}
+/*--------- Bar Top Title ----------*/
+.barTop #title {
+  float: left;
+  display: flex;
+}
+.barTop #title span {
+  display: inline-block;
+  margin: auto 0.5rem;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.barTop #title .fa-twitter {
+  font-size: 2rem;
+  color: rgba(29, 161, 242, 1.00);
+}
+
+/*--------- Bar Top Search Bar ----------*/
+.barTop #search-bar {
+  display: flex;
+  min-width: 40%;
+  border: 1px solid grey;
+  margin: auto 2rem;
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+  overflow: hidden;
+}
+.barTop #search-bar .fa-search {
+  padding: 0.4rem;
+  color: gray;
+}
+.barTop #search-bar input {
+  border: none;
+  margin-right: 1rem;
+  flex-grow: 1;
+}
+.barTop #search-bar input:focus {
+  outline: none;
+}
+
+/*------- Content --------*/
+.content {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  background-color: lightgrey;
+  width: 100%;
+}
+.content .card-img-top {
+  width: 30px;
+}
+.card .card-body p span {
+  margin-right: 1rem;
+}
+.card .card-body p span i{
+  margin-right: 0.3rem;
+}
+.card .card-body .card-heading{
+  width: 100%;
+  display: flex;
 }
