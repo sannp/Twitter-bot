@@ -14,7 +14,7 @@ function Tweets(props) {
     <div className="card m-4" >
       <div className="card-body">
         <div className="card-heading">
-          <img src={props.data.imageUrl} alt="Profile Image" className="img-fluid rounded-circle m-2"/>  
+          <img src="https://picsum.photos/40" alt="Profile Image" className="img-fluid rounded-circle m-2"/>  
           <div className="my-auto">
             <h5 className="card-title">{props.data.name}</h5>
             <h6 className="card-subtitle mb-2 text-muted">@{props.data.scrname}</h6>
